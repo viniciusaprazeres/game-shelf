@@ -2,67 +2,81 @@ package games.model;
 
 public abstract class Games {
 
-    private String nome;
-    private String descricao;
-    private String desenvolvedora;
-    private String distribuidora;
-    private String dataDeLancamento;
-    private float preco;
+    private String name;
+    private String description;
+    private String developer;
+    private String publisher;
+    private String releaseDate;
+    private float price;
 
-    public Games(String nome, String descricao, String desenvolvedora, String distribuidora, String dataDeLancamento, float preco) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.desenvolvedora = desenvolvedora;
-        this.distribuidora = distribuidora;
-        this.dataDeLancamento = dataDeLancamento;
-        this.preco = preco;
+    public Games(String name, String description, String developer, String publisher, String releaseDate, float price) {
+        this.name = name;
+        this.description = description;
+        this.developer = developer;
+        this.publisher = publisher;
+        this.releaseDate = releaseDate;
+        this.price = price;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getDesenvolvedora() {
-        return desenvolvedora;
+    public String getDeveloper() {
+        return developer;
     }
 
-    public void setDesenvolvedora(String desenvolvedora) {
-        this.desenvolvedora = desenvolvedora;
+    public void setDeveloper(String developer) {
+        this.developer = developer;
     }
 
-    public String getDistribuidora() {
-        return distribuidora;
+    public String getPublisher() {
+        return publisher;
     }
 
-    public void setDistribuidora(String distribuidora) {
-        this.distribuidora = distribuidora;
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
 
-    public String getDataDeLancamento() {
-        return dataDeLancamento;
+    public String getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setDataDeLancamento(String dataDeLancamento) {
-        this.dataDeLancamento = dataDeLancamento;
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
-    public float getPreco() {
-        return preco;
+    public float getPrice() {
+        return price;
     }
 
-    public void setPreco(float preco) {
-        this.preco = preco;
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public void informations(){
+
+        System.out.println("************************");
+        System.out.println("    GAME INFORMATION    ");
+        System.out.println("************************");
+        System.out.println("Name: " + this.name);
+        System.out.println("Description: " + this.description);
+        System.out.println("Developer: " + this.developer);
+        System.out.println("Publisher: " + this.publisher);
+        System.out.println("Release Date: " + this.releaseDate);
+        System.out.println("Price: " + this.price);
+
     }
 }
