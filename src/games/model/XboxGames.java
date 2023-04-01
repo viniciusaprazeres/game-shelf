@@ -4,8 +4,8 @@ public class XboxGames  extends Games{
 
     private float reviews;
 
-    public XboxGames(String name, String description, String developer, String publisher, String releaseDate, float price, float reviews) {
-        super(name, description, developer, publisher, releaseDate, price);
+    public XboxGames(String name, String description, String developer, String publisher, String releaseDate, float price, String platform, float reviews) {
+        super(name, description, developer, publisher, releaseDate, price, platform);
         this.reviews = reviews;
     }
 

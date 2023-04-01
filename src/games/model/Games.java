@@ -9,13 +9,16 @@ public abstract class Games {
     private String releaseDate;
     private float price;
 
-    public Games(String name, String description, String developer, String publisher, String releaseDate, float price) {
+    private String platform;
+
+    public Games(String name, String description, String developer, String publisher, String releaseDate, float price, String platform) {
         this.name = name;
         this.description = description;
         this.developer = developer;
         this.publisher = publisher;
         this.releaseDate = releaseDate;
         this.price = price;
+        this.platform = platform;
     }
 
     public String getName() {
@@ -66,6 +69,14 @@ public abstract class Games {
         this.price = price;
     }
 
+    public String getPlatform() {
+        return platform;
+    }
+
+    public void setPlatform(String platform) {
+        this.platform = platform;
+    }
+
     public void informations(){
 
         System.out.println("************************");
@@ -77,6 +88,7 @@ public abstract class Games {
         System.out.println("Publisher: " + this.publisher);
         System.out.println("Release Date: " + this.releaseDate);
         System.out.println("Price: " + this.price);
+        System.out.println("Platform: " + this.platform);
 
     }
 }

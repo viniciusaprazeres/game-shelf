@@ -5,8 +5,8 @@ public class SteamGames extends Games{
     private int recentReviews;
     private int allReviews;
 
-    public SteamGames(String name, String description, String developer, String publisher, String releaseDate, float price, int recentReviews, int allReviews) {
-        super(name, description, developer, publisher, releaseDate, price);
+    public SteamGames(String name, String description, String developer, String publisher, String releaseDate, float price, String platform, int recentReviews, int allReviews) {
+        super(name, description, developer, publisher, releaseDate, price, platform);
         this.recentReviews = recentReviews;
         this.allReviews = allReviews;
     }

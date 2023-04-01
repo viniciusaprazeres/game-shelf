@@ -6,8 +6,8 @@ public class EpicGamesStoreGames extends Games{
     private int topCriticAverage;
     private String openCriticRating;
 
-    public EpicGamesStoreGames(String name, String description, String developer, String publisher, String releaseDate, float price, int criticsRecommend, int topCriticAverage, String openCriticRating) {
-        super(name, description, developer, publisher, releaseDate, price);
+    public EpicGamesStoreGames(String name, String description, String developer, String publisher, String releaseDate, float price, String platform, int criticsRecommend, int topCriticAverage, String openCriticRating) {
+        super(name, description, developer, publisher, releaseDate, price, platform);
         this.criticsRecommend = criticsRecommend;
         this.topCriticAverage = topCriticAverage;
         this.openCriticRating = openCriticRating;

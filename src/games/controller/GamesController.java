@@ -19,6 +19,7 @@ public class GamesController implements GamesRepository {
     public void searchAll() {
         for (var game: gamesList)
             game.informations();
+            System.out.println("\n");
     }
 
     @Override
