@@ -1,7 +1,9 @@
 package games;
 
 import games.controller.GamesController;
+import games.model.EpicGamesStoreGames;
 import games.model.SteamGames;
+import games.model.XboxGames;
 import games.util.Colors;
 
 import java.io.IOException;
@@ -15,9 +17,9 @@ public class Menu {
         Scanner read = new Scanner(System.in);
         GamesController games = new GamesController();
 
-        int option, recentReviews, allReviews;
-        float price;
-        String name, description, developer, publisher, releaseDate;
+        int option, recentReviews, allReviews, criticsRecommend, topCriticAverage;
+        float price, reviews;
+        String name, description, developer, publisher, releaseDate, platform, openCriticRating;
 
         while (true){
 
@@ -59,8 +61,10 @@ public class Menu {
             }
 
             switch (option) {
+
                 case 1 -> {
-                    System.out.println("\nRegister the game\n");
+
+                    System.out.println("Enter the informations for register \n");
 
                     System.out.println("Name: ");
                     read.skip("\\R?");
@@ -85,16 +89,61 @@ public class Menu {
                     System.out.println("Price: ");
                     price = read.nextFloat();
 
-                    // Steam Game:
-                    recentReviews = 95;
-                    allReviews = 95;
-                    games.create(new SteamGames(name, description, developer, publisher, releaseDate, price, recentReviews, allReviews));
-                    keyPress();
+                    System.out.println("Platform (Steam | Epic Games Store | Xbox): ");
+                    read.skip("\\R?");
+                    platform = read.nextLine();
+
+                    if (platform.equalsIgnoreCase("Steam")) {
+
+                        platform = "Steam";
+
+                        System.out.println("Recent reviews: ");
+                        recentReviews = read.nextInt();
+
+                        System.out.println("All reviews: ");
+                        allReviews = read.nextInt();
+
+                        games.create(new SteamGames(name, description, developer, publisher, releaseDate, price, platform, recentReviews, allReviews));
+
+                        keyPress();
+                    } else {
+                        if (platform.equalsIgnoreCase("Epic Games Store")) {
+
+                            platform = "Epic Games Store";
+
+                            System.out.println("Critics Recommend: ");
+                            criticsRecommend = read.nextInt();
+
+                            System.out.println("Top Critic Average: ");
+                            topCriticAverage = read.nextInt();
+
+                            System.out.println("Open Critic Rating: ");
+                            read.skip("\\R?");
+                            openCriticRating = read.nextLine();
+
+                            games.create(new EpicGamesStoreGames(name, description, developer, publisher, releaseDate, price, platform, criticsRecommend, topCriticAverage, openCriticRating));
+
+                        } else if (platform.equalsIgnoreCase("Xbox")) {
+
+                            platform = "Xbox";
+
+                            System.out.println("Reviews: ");
+                            reviews = read.nextFloat();
+
+                            games.create(new XboxGames(name, description, developer, publisher, releaseDate, price, platform, reviews));
+
+                        }
+                        keyPress();
+                    }
+
                 }
+
                 case 2 -> {
+
                     System.out.println("All games: \n");
                     games.searchAll();
                     keyPress();
+
                 }
                 default -> {
                     System.out.println("\n Wrong option!");
