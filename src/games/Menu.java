@@ -44,7 +44,7 @@ public class Menu {
             System.out.println("============================================================================================");
             System.out.println("                                                     ");
 
-            System.out.println("Enter with the number option: ");
+            System.out.println("Enter with the number option: \n");
 
             try {
                 option = read.nextInt();
@@ -145,6 +145,19 @@ public class Menu {
                     keyPress();
 
                 }
+
+                case 3 -> {
+
+                    System.out.println("List of games by the name \n");
+
+                    System.out.println("Name: ");
+                    read.skip("\\R?");
+                    name = read.nextLine();
+                    games.searchByName(name);
+                    keyPress();
+
+                }
+
                 default -> {
                     System.out.println("\n Wrong option!");
                     keyPress();

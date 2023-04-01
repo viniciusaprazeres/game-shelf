@@ -19,7 +19,7 @@ public class GamesController implements GamesRepository {
     public void searchAll() {
         for (var game: gamesList)
             game.informations();
-            System.out.println("\n");
+        System.out.println("\n");
     }
 
     @Override
@@ -56,9 +56,11 @@ public class GamesController implements GamesRepository {
 
     // Secondary methods
     public Games searchInTheCollection(String name) {
-            if (gamesList.contains(name)) {
-                return gamesList.get(gamesList.indexOf(name));
-            }
+
+        for (var game : gamesList){
+            if (game.getName().equalsIgnoreCase(name))
+                return gamesList.get(gamesList.indexOf(game));
+        }
 
         return null;
     }
