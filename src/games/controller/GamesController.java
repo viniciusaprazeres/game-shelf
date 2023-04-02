@@ -33,8 +33,8 @@ public class GamesController implements GamesRepository {
     }
 
     @Override
-    public void update(Games game) {
-        var searchGame = searchInTheCollection(game.getName());
+    public void update(String name, Games game) {
+        var searchGame = searchInTheCollection(name);
 
         if (searchGame != null){
             gamesList.set(gamesList.indexOf(searchGame), game);

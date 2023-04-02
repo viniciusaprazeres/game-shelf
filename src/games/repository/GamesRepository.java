@@ -8,6 +8,6 @@ public interface GamesRepository {
     public void create(Games game);
     public void searchAll();
     public void searchByName(String name);
-    public void update(Games game);
+    public void update(String name, Games game);
     public void delete(String name);
 }

@@ -19,7 +19,7 @@ public class Menu {
 
         int option, recentReviews, allReviews, criticsRecommend, topCriticAverage;
         float price, reviews;
-        String name, description, developer, publisher, releaseDate, platform, openCriticRating;
+        String name, newName, description, developer, publisher, releaseDate, platform, openCriticRating;
 
         while (true){
 
@@ -37,7 +37,7 @@ public class Menu {
             System.out.println("                                1 - Register a Game                          ");
             System.out.println("                                2 - List All              ");
             System.out.println("                                3 - Search By Name              ");
-            System.out.println("                                4 - Update Information             ");
+            System.out.println("                                4 - Update Informations             ");
             System.out.println("                                5 - Erase From The Shelf                        ");
             System.out.println("                                6 - Exit                                 ");
             System.out.println("                                                     ");
@@ -106,34 +106,36 @@ public class Menu {
                         games.create(new SteamGames(name, description, developer, publisher, releaseDate, price, platform, recentReviews, allReviews));
 
                         keyPress();
-                    } else {
-                        if (platform.equalsIgnoreCase("Epic Games Store")) {
 
-                            platform = "Epic Games Store";
+                    } else if (platform.equalsIgnoreCase("Epic Games Store")) {
 
-                            System.out.println("Critics Recommend: ");
-                            criticsRecommend = read.nextInt();
+                        platform = "Epic Games Store";
 
-                            System.out.println("Top Critic Average: ");
-                            topCriticAverage = read.nextInt();
+                        System.out.println("Critics Recommend: ");
+                        criticsRecommend = read.nextInt();
 
-                            System.out.println("Open Critic Rating: ");
-                            read.skip("\\R?");
-                            openCriticRating = read.nextLine();
+                        System.out.println("Top Critic Average: ");
+                        topCriticAverage = read.nextInt();
 
-                            games.create(new EpicGamesStoreGames(name, description, developer, publisher, releaseDate, price, platform, criticsRecommend, topCriticAverage, openCriticRating));
+                        System.out.println("Open Critic Rating: ");
+                        read.skip("\\R?");
+                        openCriticRating = read.nextLine();
 
-                        } else if (platform.equalsIgnoreCase("Xbox")) {
+                        games.create(new EpicGamesStoreGames(name, description, developer, publisher, releaseDate, price, platform, criticsRecommend, topCriticAverage, openCriticRating));
 
-                            platform = "Xbox";
-
-                            System.out.println("Reviews: ");
-                            reviews = read.nextFloat();
-
-                            games.create(new XboxGames(name, description, developer, publisher, releaseDate, price, platform, reviews));
-
-                        }
                         keyPress();
+
+                    } else if (platform.equalsIgnoreCase("Xbox")) {
+
+                        platform = "Xbox";
+
+                        System.out.println("Reviews: ");
+                        reviews = read.nextFloat();
+
+                        games.create(new XboxGames(name, description, developer, publisher, releaseDate, price, platform, reviews));
+
+                        keyPress();
+
                     }
 
                 }
@@ -153,8 +155,96 @@ public class Menu {
                     System.out.println("Name: ");
                     read.skip("\\R?");
                     name = read.nextLine();
+
                     games.searchByName(name);
+
                     keyPress();
+
+                }
+
+                case 4 -> {
+
+                    System.out.println("Update \n");
+
+                    System.out.println("Name of the game to search: ");
+                    read.skip("\\R?");
+                    name = read.nextLine();
+
+                    if (games.searchInTheCollection(name) != null){
+
+                        System.out.println("New name: ");
+                        read.skip("\\R?");
+                        newName = read.nextLine();
+
+                        System.out.println("New description: ");
+                        read.skip("\\R?");
+                        description = read.nextLine();
+
+                        System.out.println("New developer: ");
+                        read.skip("\\R?");
+                        developer = read.nextLine();
+
+                        System.out.println("New publisher: ");
+                        read.skip("\\R?");
+                        publisher = read.nextLine();
+
+                        System.out.println("New release date: ");
+                        read.skip("\\R?");
+                        releaseDate = read.nextLine();
+
+                        System.out.println("New price: ");
+                        price = read.nextFloat();
+
+                        System.out.println("New platform (Steam | Epic Games Store | Xbox): ");
+                        read.skip("\\R?");
+                        platform = read.nextLine();
+
+                        if (platform.equalsIgnoreCase("Steam")) {
+
+                            platform = "Steam";
+
+                            System.out.println("Recent reviews: ");
+                            recentReviews = read.nextInt();
+
+                            System.out.println("All reviews: ");
+                            allReviews = read.nextInt();
+
+                            games.update(name, new SteamGames(newName, description, developer, publisher, releaseDate, price, platform, recentReviews, allReviews));
+
+                            keyPress();
+
+                        } else if (platform.equalsIgnoreCase("Epic Games Store")) {
+
+                            platform = "Epic Games Store";
+
+                            System.out.println("Critics Recommend: ");
+                            criticsRecommend = read.nextInt();
+
+                            System.out.println("Top Critic Average: ");
+                            topCriticAverage = read.nextInt();
+
+                            System.out.println("Open Critic Rating: ");
+                            read.skip("\\R?");
+                            openCriticRating = read.nextLine();
+
+                            games.update(name, new EpicGamesStoreGames(newName, description, developer, publisher, releaseDate, price, platform, criticsRecommend, topCriticAverage, openCriticRating));
+
+                            keyPress();
+
+                        } else if (platform.equalsIgnoreCase("Xbox")) {
+
+                            platform = "Xbox";
+
+                            System.out.println("Reviews: ");
+                            reviews = read.nextFloat();
+
+                            games.update(name, new XboxGames(newName, description, developer, publisher, releaseDate, price, platform, reviews));
+
+                            keyPress();
+
+                        }
+                    } else
+                        System.out.println("The game was not found!");
 
                 }
 
