@@ -38,7 +38,7 @@ public class Menu {
             System.out.println("                                2 - List All              ");
             System.out.println("                                3 - Search By Name              ");
             System.out.println("                                4 - Update Informations             ");
-            System.out.println("                                5 - Erase From The Shelf                        ");
+            System.out.println("                                5 - Erase Game                        ");
             System.out.println("                                6 - Exit                                 ");
             System.out.println("                                                     ");
             System.out.println("============================================================================================");
@@ -142,7 +142,6 @@ public class Menu {
 
                 case 2 -> {
 
-                    System.out.println("All games: \n");
                     games.searchAll();
                     keyPress();
 
@@ -245,6 +244,20 @@ public class Menu {
                         }
                     } else
                         System.out.println("The game was not found!");
+
+                }
+
+                case 5 -> {
+
+                    System.out.println("Erase from the shelf\n");
+
+                    System.out.println("Enter the name of the game: ");
+                    read.skip("\\R?");
+                    name = read.nextLine();
+
+                    games.delete(name);
+
+                    keyPress();
 
                 }
 

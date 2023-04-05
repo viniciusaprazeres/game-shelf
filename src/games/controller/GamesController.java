@@ -17,9 +17,15 @@ public class GamesController implements GamesRepository {
 
     @Override
     public void searchAll() {
-        for (var game: gamesList)
-            game.informations();
-        System.out.println("\n");
+        if (gamesList.isEmpty()) {
+            System.out.println("There are no registered games!");
+        } else {
+            System.out.println("All games: \n");
+            for (var game : gamesList) {
+                game.informations();
+                System.out.println("\n");
+            }
+        }
     }
 
     @Override
@@ -29,7 +35,7 @@ public class GamesController implements GamesRepository {
         if (game != null)
             game.informations();
         else
-            System.out.println("The game: " + name + " was not found!");
+            System.out.println("The game " + name + " was not found!");
     }
 
     @Override
@@ -38,9 +44,9 @@ public class GamesController implements GamesRepository {
 
         if (searchGame != null){
             gamesList.set(gamesList.indexOf(searchGame), game);
-            System.out.println("The game: " + game.getName() + " was updated!");
+            System.out.println("The game " + game.getName() + " was updated!");
         } else
-            System.out.println("The game: " + game.getName() + " was not found!");
+            System.out.println("The game " + game.getName() + " was not found!");
     }
 
     @Override
@@ -49,9 +55,9 @@ public class GamesController implements GamesRepository {
 
         if (game != null){
             if (gamesList.remove(game))
-                System.out.println("The game: " + name + " was deleted!");
+                System.out.println("The game " + name + " was deleted!");
         } else
-            System.out.println("The game: " + name + " was not found!");
+            System.out.println("The game " + name + " was not found!");
     }
 
     // Secondary methods
