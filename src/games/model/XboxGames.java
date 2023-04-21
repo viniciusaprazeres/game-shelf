@@ -18,6 +18,21 @@ public class XboxGames  extends Games{
     }
 
     public void informations(){
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⡤⠴⢾⣿⣿⣻⢿⣽⢿⣿⣿⡷⠦⢄⡀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⣠⣀⡀⠀⠀⠀⠀⠈⠙⠻⠟⠋⠁⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⢀⣴⣿⢿⡿⣷⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣾⣿⢿⡿⣧⡀⠀⠀");
+        System.out.println("⠀⢀⣾⡿⣯⣿⣻⣽⣟⣿⠆⠀⠀⠀⠀⠀⠀⠰⣾⣿⢯⣿⣻⣽⡿⣷⡀⠀");
+        System.out.println("⠀⣼⣿⢿⣽⡷⣟⣿⡞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⣳⡿⣯⣟⣿⣧⠀");
+        System.out.println("⢰⣿⢯⣿⢷⣿⣻⠏⠀⠀⠀⠀⣠⣼⣧⣄⠀⠀⠀⠀⠙⣿⣽⡿⣽⣾⢿⡄");
+        System.out.println("⢸⣯⣿⢯⣿⡾⠃⠀⠀⠀⣠⣾⣿⣻⣽⢿⣷⣄⠀⠀⠀⠘⢯⣿⣟⣾⢿⡃");
+        System.out.println("⠈⣷⣿⣻⡷⠁⠀⠀⣠⣾⡿⣟⣷⡿⣯⣿⢾⣻⣷⣄⠀⠀⠈⢿⣾⣟⣿⠁");
+        System.out.println("⠀⢻⣿⣽⠁⠀⢀⣴⣿⣯⢿⡿⣽⣻⣽⣾⢿⣯⣷⢿⣦⡀⠀⠈⣿⣾⡟⠀");
+        System.out.println("⠀⠈⢿⡇⠀⢠⣾⣿⣻⣾⣟⣿⣻⣽⣟⣾⢿⣳⣿⣻⣟⣷⡄⠀⢸⡿⠁⠀");
+        System.out.println("⠀⠀⠀⠧⢀⣿⣿⣳⣿⣳⡿⣽⣯⣷⢿⣯⣿⣻⢷⡿⣽⣯⣿⡀⠜⠁⠀");
+        System.out.println("⠀⠀⠀⠀⠈⠻⣷⢿⣳⣿⣻⣯⣷⢿⣯⣷⣟⣯⣿⣟⣯⣷⠟⠁⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠙⠻⠷⣿⣳⡿⣯⣷⢿⣾⣻⠷⠛⠉⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠉⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
         super.informations();
         System.out.println("Reviews: " + this.reviews);
     }
