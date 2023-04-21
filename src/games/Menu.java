@@ -23,7 +23,7 @@ public class Menu {
 
         while (true){
 
-            System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "============================================================================================");
+            System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "============================================================================================");
             System.out.println("                                                     ");
             System.out.println("  ________                                    _________ .__               .__      _____  ");
             System.out.println(" /  _____/  _____      _____     ____        /   _____/ |  |__     ____   |  |   _/ ____\\ ");
@@ -31,7 +31,13 @@ public class Menu {
             System.out.println("\\    \\_\\  \\  / __ \\_ |  Y Y  \\ \\  ___/       /        \\ |   Y  \\ \\  ___/  |  |__  |  |    ");
             System.out.println(" \\______  / (____  / |__|_|  /  \\___  >     /_______  / |___|  /  \\___  > |____/  |__|   ");
             System.out.println("        \\/       \\/        \\/       \\/              \\/       \\/       \\/");
-            System.out.println("                                                     ");
+            System.out.println("                                                      \\ ");
+            System.out.println("                                           ,---.        \\");
+            System.out.println("                                          ;     \\        ;");
+            System.out.println("                                      .==\\\"/==.  `-.___.-'");
+            System.out.println("                                    ((+) .  .:)");
+            System.out.println("                                    |`.-(o)-.'|");
+            System.out.println("                                    \\/  \\_/  \\/");
             System.out.println("============================================================================================");
             System.out.println("                                                     ");
             System.out.println("                                1 - Register a Game                          ");
@@ -43,7 +49,6 @@ public class Menu {
             System.out.println("                                                     ");
             System.out.println("============================================================================================");
             System.out.println("                                                     ");
-
             System.out.println("Enter with the number option: \n");
 
             try {
