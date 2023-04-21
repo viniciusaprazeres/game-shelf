@@ -38,6 +38,17 @@ public class EpicGamesStoreGames extends Games{
     }
 
     public void informations(){
+        System.out.println("⢠⣴⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣦⡄");
+        System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿");
+        System.out.println("⣿⣿⡇¨¨⣿¨¨¨¨¨ ⣿¨¨⡏¨¨¨¨¨⢹⣿⣿");
+        System.out.println("⣿⣿⡇⠸⣿⣿⠀⢸⡇⠀⣿⠀⢸⡇⠀⣿⣧⣼⣿⣿");
+        System.out.println("⣿⣿⡇⢀⣤⣿⠀⠈⠁⢀⣿⠀⢸⡇⠀⣿⡿⢿⣿⣿");
+        System.out.println("⣿⣿⡇⠸⠿⣿⠀⢸⣿⣿⣿⠀⢸⡇⠀⠿⠃⢸⣿⣿");
+        System.out.println("⣿⣿⣧⣤⣤⣿⣤⣼⣿⣿⣿⣤⣼⣷⣤⣤⣤⣾⣿⣿");
+        System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿");
+        System.out.println("⠈⠛⢿⣿⣿⣿⣯⣭⣉⠉⠉⣉⣭⣽⣿⣿⣿⡿⠛⠁");
+        System.out.println("⠀⠀⠀⠀⠉⠛⠿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠀⠀⠀⠀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀");
         super.informations();
         System.out.println("Critics Recommend: " + this.criticsRecommend);
         System.out.println("Top Critic Average: " + this.topCriticAverage);
