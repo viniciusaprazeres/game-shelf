@@ -28,6 +28,21 @@ public class SteamGames extends Games{
     }
 
     public void informations(){
+        System.out.println("██████████████████████████████▀▀▀▀███");
+        System.out.println("████████████████████████████▀─▄▀▀▄─▀█");
+        System.out.println("██▀─▄▄─▀████████████████████─█────█─█");
+        System.out.println("█─▄▀──▀─▀███████████████████─▀▄──▄▀─█");
+        System.out.println("█─█───────▀█████████████████▄──▀▀───█");
+        System.out.println("█▄─▀▄▄▀─────▀███████████████▀─────▄██");
+        System.out.println("███▄▄▄▄█▄─────▀████████████▀─────▄███");
+        System.out.println("██████████▄─────▀█████████▀─────▄████");
+        System.out.println("████████████▄─────▀██████▀─────▄█████");
+        System.out.println("██████████████▄─────▀▀──▀─────▄██████");
+        System.out.println("████████████████▄──────▀▀▄───▄███████");
+        System.out.println("██████████████████▄───────█─▄████████");
+        System.out.println("████████████████████▄─▄──▄▀─█████████");
+        System.out.println("█████████████████████▄─▀▀─▄██████████");
+        System.out.println("█████████████████████████████████████");
         super.informations();
         System.out.println("Recent Reviews: " + this.recentReviews + "%");
         System.out.println("All Reviews: " + this.allReviews + "%");
