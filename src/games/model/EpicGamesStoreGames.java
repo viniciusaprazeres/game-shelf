@@ -1,5 +1,7 @@
 package games.model;
 
+import games.util.Colors;
+
 public class EpicGamesStoreGames extends Games{
 
     private int criticsRecommend;
@@ -38,7 +40,7 @@ public class EpicGamesStoreGames extends Games{
     }
 
     public void informations(){
-        System.out.println("⢠⣴⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣦⡄");
+        System.out.println(Colors.TEXT_WHITE_BOLD_BRIGHT + "⢠⣴⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣦⡄");
         System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿");
         System.out.println("⣿⣿⡇¨¨⣿¨¨¨¨¨ ⣿¨¨⡏¨¨¨¨¨⢹⣿⣿");
         System.out.println("⣿⣿⡇⠸⣿⣿⠀⢸⡇⠀⣿⠀⢸⡇⠀⣿⣧⣼⣿⣿");
@@ -52,6 +54,6 @@ public class EpicGamesStoreGames extends Games{
         super.informations();
         System.out.println("Critics Recommend: " + this.criticsRecommend);
         System.out.println("Top Critic Average: " + this.topCriticAverage);
-        System.out.println("Open Critic Rating: " + this.openCriticRating);
+        System.out.println("Open Critic Rating: " + this.openCriticRating + Colors.TEXT_RESET);
     }
 }
