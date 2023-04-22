@@ -1,5 +1,7 @@
 package games.model;
 
+import games.util.Colors;
+
 public class SteamGames extends Games{
 
     private int recentReviews;
@@ -28,7 +30,7 @@ public class SteamGames extends Games{
     }
 
     public void informations(){
-        System.out.println("██████████████████████████████▀▀▀▀███");
+        System.out.println(Colors.TEXT_BLUE_BOLD_BRIGHT + "██████████████████████████████▀▀▀▀███");
         System.out.println("████████████████████████████▀─▄▀▀▄─▀█");
         System.out.println("██▀─▄▄─▀████████████████████─█────█─█");
         System.out.println("█─▄▀──▀─▀███████████████████─▀▄──▄▀─█");
@@ -45,6 +47,6 @@ public class SteamGames extends Games{
         System.out.println("█████████████████████████████████████");
         super.informations();
         System.out.println("Recent Reviews: " + this.recentReviews + "%");
-        System.out.println("All Reviews: " + this.allReviews + "%");
+        System.out.println("All Reviews: " + this.allReviews + "%" + Colors.TEXT_RESET);
     }
 }
