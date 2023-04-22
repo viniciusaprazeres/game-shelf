@@ -1,5 +1,7 @@
 package games.model;
 
+import games.util.Colors;
+
 public class XboxGames  extends Games{
 
     private float reviews;
@@ -18,7 +20,7 @@ public class XboxGames  extends Games{
     }
 
     public void informations(){
-        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println(Colors.TEXT_GREEN_BOLD_BRIGHT + "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
         System.out.println("⠀⠀⠀⠀⠀⠀⠀⡤⠴⢾⣿⣿⣻⢿⣽⢿⣿⣿⡷⠦⢄⡀⠀⠀⠀⠀⠀⠀");
         System.out.println("⠀⠀⠀⠀⣠⣀⡀⠀⠀⠀⠀⠈⠙⠻⠟⠋⠁⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀");
         System.out.println("⠀⠀⢀⣴⣿⢿⡿⣷⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣾⣿⢿⡿⣧⡀⠀⠀");
@@ -34,6 +36,6 @@ public class XboxGames  extends Games{
         System.out.println("⠀⠀⠀⠀⠀⠀⠀⠙⠻⠷⣿⣳⡿⣯⣷⢿⣾⣻⠷⠛⠉⠀⠀⠀⠀⠀⠀⠀");
         System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠉⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
         super.informations();
-        System.out.println("Reviews: " + this.reviews);
+        System.out.println("Reviews: " + this.reviews + Colors.TEXT_RESET);
     }
 }
