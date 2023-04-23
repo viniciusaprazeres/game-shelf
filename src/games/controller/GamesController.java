@@ -19,9 +19,9 @@ public class GamesController implements GamesRepository {
     @Override
     public void searchAll() {
         if (gamesList.isEmpty()) {
-            System.out.println("There are no registered games!");
+            System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "There are no registered games!" + Colors.TEXT_RESET);
         } else {
-            System.out.println("All games: \n");
+            System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "All games: \n" + Colors.TEXT_RESET);
             for (var game : gamesList) {
                 game.informations();
                 System.out.println("\n");
@@ -36,7 +36,7 @@ public class GamesController implements GamesRepository {
         if (game != null)
             game.informations();
         else
-            System.out.println("The game " + name + " was not found!");
+            System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "The game " + name + " was not found!" + Colors.TEXT_RESET);
     }
 
     @Override

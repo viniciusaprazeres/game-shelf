@@ -42,8 +42,8 @@ public class Menu {
             System.out.println("============================================================================================" + Colors.TEXT_RESET);
             System.out.println("                                                     ");
             System.out.println("                                1 - Register a Game                          ");
-            System.out.println("                                2 - List All              ");
-            System.out.println("                                3 - Search By Name              ");
+            System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "                                2 - List All              ");
+            System.out.println("                                3 - Search By Name              " + Colors.TEXT_RESET);
             System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "                                4 - Update Informations             " + Colors.TEXT_RESET);
             System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "                                5 - Erase Game                        " + Colors.TEXT_RESET);
             System.out.println("                                6 - Exit                                 ");
@@ -155,7 +155,7 @@ public class Menu {
 
                 case 3 -> {
 
-                    System.out.println("List of games by the name \n");
+                    System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "List of games by the name \n");
 
                     System.out.println("Name: ");
                     read.skip("\\R?");
