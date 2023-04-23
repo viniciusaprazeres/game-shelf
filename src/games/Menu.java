@@ -44,7 +44,7 @@ public class Menu {
             System.out.println("                                1 - Register a Game                          ");
             System.out.println("                                2 - List All              ");
             System.out.println("                                3 - Search By Name              ");
-            System.out.println("                                4 - Update Informations             ");
+            System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "                                4 - Update Informations             " + Colors.TEXT_RESET);
             System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "                                5 - Erase Game                        " + Colors.TEXT_RESET);
             System.out.println("                                6 - Exit                                 ");
             System.out.println("                                                     ");
@@ -169,7 +169,7 @@ public class Menu {
 
                 case 4 -> {
 
-                    System.out.println("Update \n");
+                    System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "Update \n");
 
                     System.out.println("Name of the game to search: ");
                     read.skip("\\R?");
@@ -249,7 +249,7 @@ public class Menu {
 
                         }
                     } else
-                        System.out.println("The game was not found!");
+                        System.out.println("The game was not found!" + Colors.TEXT_RESET);
 
                 }
 
