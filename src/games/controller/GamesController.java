@@ -2,6 +2,7 @@ package games.controller;
 
 import games.model.Games;
 import games.repository.GamesRepository;
+import games.util.Colors;
 
 import java.util.ArrayList;
 
@@ -55,9 +56,9 @@ public class GamesController implements GamesRepository {
 
         if (game != null){
             if (gamesList.remove(game))
-                System.out.println("The game " + name + " was deleted!");
+                System.out.println("The game " + name + " was deleted!" + Colors.TEXT_RESET);
         } else
-            System.out.println("The game " + name + " was not found!");
+            System.out.println("The game " + name + " was not found!" + Colors.TEXT_RESET);
     }
 
     // Secondary methods

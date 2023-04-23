@@ -6,6 +6,7 @@ import games.model.SteamGames;
 import games.model.XboxGames;
 import games.util.Colors;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -23,7 +24,7 @@ public class Menu {
 
         while (true){
 
-            System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "============================================================================================");
+            System.out.println(Colors.TEXT_CYAN_BOLD_BRIGHT + "============================================================================================");
             System.out.println("                                                     ");
             System.out.println("  ________                                    _________ .__               .__      _____  ");
             System.out.println(" /  _____/  _____      _____     ____        /   _____/ |  |__     ____   |  |   _/ ____\\ ");
@@ -38,16 +39,16 @@ public class Menu {
             System.out.println("                                    ((+) .  .:)");
             System.out.println("                                    |`.-(o)-.'|");
             System.out.println("                                    \\/  \\_/  \\/");
-            System.out.println("============================================================================================");
+            System.out.println("============================================================================================" + Colors.TEXT_RESET);
             System.out.println("                                                     ");
             System.out.println("                                1 - Register a Game                          ");
             System.out.println("                                2 - List All              ");
             System.out.println("                                3 - Search By Name              ");
             System.out.println("                                4 - Update Informations             ");
-            System.out.println("                                5 - Erase Game                        ");
+            System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "                                5 - Erase Game                        " + Colors.TEXT_RESET);
             System.out.println("                                6 - Exit                                 ");
             System.out.println("                                                     ");
-            System.out.println("============================================================================================");
+            System.out.println(Colors.TEXT_CYAN_BOLD_BRIGHT + "============================================================================================" + Colors.TEXT_RESET);
             System.out.println("                                                     ");
             System.out.println("Enter with the number option: \n");
 
@@ -254,7 +255,7 @@ public class Menu {
 
                 case 5 -> {
 
-                    System.out.println("Erase from the shelf\n");
+                    System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "Erase from the shelf\n");
 
                     System.out.println("Enter the name of the game: ");
                     read.skip("\\R?");
