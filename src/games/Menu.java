@@ -42,10 +42,9 @@ public class Menu {
             System.out.println("============================================================================================" + Colors.TEXT_RESET);
             System.out.println("                                                     ");
             System.out.println("                                1 - Register a Game                          ");
-            System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "                                2 - List All              ");
-            System.out.println("                                3 - Search By Name              " + Colors.TEXT_RESET);
+            System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "                                2 - Search                      " + Colors.TEXT_RESET);
             System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "                                4 - Update Informations             " + Colors.TEXT_RESET);
-            System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "                                5 - Erase Game                        " + Colors.TEXT_RESET);
+            System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "                                5 - Delete Game                        " + Colors.TEXT_RESET);
             System.out.println("                                6 - Exit                                 ");
             System.out.println("                                                     ");
             System.out.println(Colors.TEXT_CYAN_BOLD_BRIGHT + "============================================================================================" + Colors.TEXT_RESET);
@@ -148,22 +147,28 @@ public class Menu {
 
                 case 2 -> {
 
-                    games.searchAll();
-                    keyPress();
+                    System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "1 - List All Games \n2 - to Search By Name ");
+                    int typeSearch = read.nextInt();
+                    if (typeSearch == 1) {
+                        games.searchAll();
+                        keyPress();
+                    } else if (typeSearch == 2) {
+                        System.out.println("List of games by the name \n");
+
+                        System.out.println("Name: ");
+                        read.skip("\\R?");
+                        name = read.nextLine();
+
+                        games.searchByName(name);
+
+                        keyPress();
+                    }
 
                 }
 
                 case 3 -> {
 
-                    System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "List of games by the name \n");
 
-                    System.out.println("Name: ");
-                    read.skip("\\R?");
-                    name = read.nextLine();
-
-                    games.searchByName(name);
-
-                    keyPress();
 
                 }
 
