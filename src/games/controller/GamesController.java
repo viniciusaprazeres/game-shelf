@@ -13,7 +13,7 @@ public class GamesController implements GamesRepository {
     @Override
     public void create(Games game) {
         gamesList.add(game);
-        System.out.println("The game was registered!");
+        System.out.println("The game was registered!" + Colors.TEXT_RESET);
     }
 
     @Override

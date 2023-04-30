@@ -24,7 +24,7 @@ public class Menu {
 
         while (true){
 
-            System.out.println(Colors.TEXT_CYAN_BOLD_BRIGHT + "============================================================================================");
+            System.out.println(Colors.TEXT_CYAN_BOLD + "============================================================================================");
             System.out.println("                                                     ");
             System.out.println("  ________                                    _________ .__               .__      _____  ");
             System.out.println(" /  _____/  _____      _____     ____        /   _____/ |  |__     ____   |  |   _/ ____\\ ");
@@ -41,15 +41,15 @@ public class Menu {
             System.out.println("                                    \\/  \\_/  \\/");
             System.out.println("============================================================================================" + Colors.TEXT_RESET);
             System.out.println("                                                     ");
-            System.out.println("                                1 - Register a Game                          ");
-            System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "                                2 - Search                      " + Colors.TEXT_RESET);
-            System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "                                3 - Update Informations             " + Colors.TEXT_RESET);
-            System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "                                4 - Delete Game                        " + Colors.TEXT_RESET);
+            System.out.println(Colors.TEXT_GREEN + "                                1 - Register a Game                          ");
+            System.out.println(Colors.TEXT_PURPLE + "                                2 - Search                      " + Colors.TEXT_RESET);
+            System.out.println(Colors.TEXT_YELLOW + "                                3 - Update Informations             " + Colors.TEXT_RESET);
+            System.out.println(Colors.TEXT_RED + "                                4 - Delete Game                        " + Colors.TEXT_RESET);
             System.out.println("                                5 - Exit                                 ");
             System.out.println("                                                     ");
-            System.out.println(Colors.TEXT_CYAN_BOLD_BRIGHT + "============================================================================================" + Colors.TEXT_RESET);
+            System.out.println(Colors.TEXT_CYAN_BOLD + "============================================================================================");
             System.out.println("                                                     ");
-            System.out.println("Enter with the number option: \n");
+            System.out.println("Enter with the number option: \n" + Colors.TEXT_RESET);
 
             try {
                 option = read.nextInt();
@@ -69,7 +69,7 @@ public class Menu {
 
                 case 1 -> {
 
-                    System.out.println("Enter the informations for register \n");
+                    System.out.println(Colors.TEXT_GREEN + "Enter the informations for register \n");
 
                     System.out.println("Name: ");
                     read.skip("\\R?");
@@ -147,7 +147,7 @@ public class Menu {
 
                 case 2 -> {
 
-                    System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "1 - List All Games \n2 - to Search By Name ");
+                    System.out.println(Colors.TEXT_PURPLE + "1 - List All Games \n2 - to Search By Name ");
                     int typeSearch = read.nextInt();
                     if (typeSearch == 1) {
                         games.searchAll();
@@ -168,7 +168,7 @@ public class Menu {
 
                 case 3 -> {
 
-                    System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "Update \n");
+                    System.out.println(Colors.TEXT_YELLOW + "Update \n");
 
                     System.out.println("Name of the game to search: ");
                     read.skip("\\R?");
@@ -254,7 +254,7 @@ public class Menu {
 
                 case 4 -> {
 
-                    System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "Erase from the shelf\n");
+                    System.out.println(Colors.TEXT_RED + "Erase from the shelf\n");
 
                     System.out.println("Enter the name of the game: ");
                     read.skip("\\R?");
