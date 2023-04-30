@@ -43,9 +43,9 @@ public class Menu {
             System.out.println("                                                     ");
             System.out.println("                                1 - Register a Game                          ");
             System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "                                2 - Search                      " + Colors.TEXT_RESET);
-            System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "                                4 - Update Informations             " + Colors.TEXT_RESET);
-            System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "                                5 - Delete Game                        " + Colors.TEXT_RESET);
-            System.out.println("                                6 - Exit                                 ");
+            System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "                                3 - Update Informations             " + Colors.TEXT_RESET);
+            System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "                                4 - Delete Game                        " + Colors.TEXT_RESET);
+            System.out.println("                                5 - Exit                                 ");
             System.out.println("                                                     ");
             System.out.println(Colors.TEXT_CYAN_BOLD_BRIGHT + "============================================================================================" + Colors.TEXT_RESET);
             System.out.println("                                                     ");
@@ -59,7 +59,7 @@ public class Menu {
                 option = 0;
             }
 
-            if (option == 6) {
+            if (option == 5) {
                 System.out.println("Thank you for using Game Shelf. See you later!");
                 read.close();
                 System.exit(0);
@@ -168,12 +168,6 @@ public class Menu {
 
                 case 3 -> {
 
-
-
-                }
-
-                case 4 -> {
-
                     System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "Update \n");
 
                     System.out.println("Name of the game to search: ");
@@ -258,7 +252,7 @@ public class Menu {
 
                 }
 
-                case 5 -> {
+                case 4 -> {
 
                     System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "Erase from the shelf\n");
 
