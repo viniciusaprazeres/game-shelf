@@ -13,7 +13,7 @@ public class GamesController implements GamesRepository {
     @Override
     public void create(Games game) {
         gamesList.add(game);
-        System.out.println("The game was registered!" + Colors.TEXT_RESET);
+        System.out.println("The game " + game.getName() + " was registered!" + Colors.TEXT_RESET);
     }
 
     @Override
@@ -45,9 +45,9 @@ public class GamesController implements GamesRepository {
 
         if (searchGame != null){
             gamesList.set(gamesList.indexOf(searchGame), game);
-            System.out.println("The game " + game.getName() + " was updated!");
+            System.out.println("The game " + name + " was updated!");
         } else
-            System.out.println("The game " + game.getName() + " was not found!");
+            System.out.println("The game " + name + " was not found!");
     }
 
     @Override
