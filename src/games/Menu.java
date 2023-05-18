@@ -24,7 +24,7 @@ public class Menu {
 
         while (true){
 
-            System.out.println(Colors.TEXT_CYAN_BOLD + "============================================================================================");
+            System.out.println(Colors.TEXT_CYAN_BOLD_BRIGHT + "============================================================================================");
             System.out.println("                                                     ");
             System.out.println("  ________                                    _________ .__               .__      _____  ");
             System.out.println(" /  _____/  _____      _____     ____        /   _____/ |  |__     ____   |  |   _/ ____\\ ");
@@ -41,13 +41,13 @@ public class Menu {
             System.out.println("                                    \\/  \\_/  \\/");
             System.out.println("============================================================================================" + Colors.TEXT_RESET);
             System.out.println("                                                     ");
-            System.out.println(Colors.TEXT_GREEN + "                                1 - Register Game                          ");
-            System.out.println(Colors.TEXT_PURPLE + "                                2 - Search Types                     " + Colors.TEXT_RESET);
-            System.out.println(Colors.TEXT_YELLOW + "                                3 - Update Informations             " + Colors.TEXT_RESET);
-            System.out.println(Colors.TEXT_RED + "                                4 - Delete By Name                        " + Colors.TEXT_RESET);
-            System.out.println("                                5 - Exit                                 ");
+            System.out.println(Colors.TEXT_GREEN_BOLD_BRIGHT + "                                1 - Register Game                          ");
+            System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "                                2 - Search Types                     " + Colors.TEXT_RESET);
+            System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "                                3 - Update Informations             " + Colors.TEXT_RESET);
+            System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "                                4 - Delete By Name                        " + Colors.TEXT_RESET);
+            System.out.println(Colors.TEXT_WHITE_BOLD_BRIGHT + "                                5 - Exit                                 ");
             System.out.println("                                                     ");
-            System.out.println(Colors.TEXT_CYAN_BOLD + "============================================================================================");
+            System.out.println(Colors.TEXT_CYAN_BOLD_BRIGHT + "============================================================================================");
             System.out.println("                                                     ");
             System.out.println("Enter with the number option: \n" + Colors.TEXT_RESET);
 
@@ -60,7 +60,7 @@ public class Menu {
             }
 
             if (option == 5) {
-                System.out.println(Colors.TEXT_GREEN + "Thank you " + Colors.TEXT_PURPLE + "for using " + Colors.TEXT_YELLOW + "Game Shelf. " + Colors.TEXT_CYAN_BOLD + "See you later!");
+                System.out.println(Colors.TEXT_GREEN_BOLD_BRIGHT + "Thank you " + Colors.TEXT_PURPLE_BOLD_BRIGHT + "for using " + Colors.TEXT_YELLOW_BOLD_BRIGHT + "Game Shelf. " + Colors.TEXT_CYAN_BOLD_BRIGHT + "See you later!");
                 read.close();
                 System.exit(0);
             }
@@ -69,7 +69,7 @@ public class Menu {
 
                 case 1 -> {
 
-                    System.out.println(Colors.TEXT_GREEN + "Register Game \n");
+                    System.out.println(Colors.TEXT_GREEN_BOLD_BRIGHT + "Register Game \n");
 
                     System.out.println("Name: ");
                     read.skip("\\R?");
@@ -147,7 +147,7 @@ public class Menu {
 
                 case 2 -> {
 
-                    System.out.println(Colors.TEXT_PURPLE + "Search Types \n1 - List All Games \n2 - Search By Name ");
+                    System.out.println(Colors.TEXT_PURPLE_BOLD_BRIGHT + "Search Types \n1 - List All Games \n2 - Search By Name ");
                     int typeSearch = read.nextInt();
                     if (typeSearch == 1) {
                         games.searchAll();
@@ -168,7 +168,7 @@ public class Menu {
 
                 case 3 -> {
 
-                    System.out.println(Colors.TEXT_YELLOW + "Update Game\n");
+                    System.out.println(Colors.TEXT_YELLOW_BOLD_BRIGHT + "Update Game\n");
 
                     System.out.println("Name of the game to search: ");
                     read.skip("\\R?");
@@ -254,7 +254,7 @@ public class Menu {
 
                 case 4 -> {
 
-                    System.out.println(Colors.TEXT_RED + "Delete From The Shelf\n");
+                    System.out.println(Colors.TEXT_RED_BOLD_BRIGHT + "Delete From The Shelf\n");
 
                     System.out.println("Enter the name of the game: ");
                     read.skip("\\R?");
