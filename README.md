@@ -1,7 +1,7 @@
 
 ![Game-Shelf](https://i.imgur.com/48drZZI.png)
 
-# 🎮 Game Shelf: An application for manage video games
+# 🎮 Game Shelf: An application for manage video games 
 
 ## 📜 About the project
 
@@ -17,8 +17,16 @@ This is software for managing games from different platforms like Epic Games Sto
 
 ## ⚒️ Technologies used
 
-This application was made using **Java** and **Object-Oriented Programming (OOP)**.
+This application was made using **Java** and **Object-Oriented Programming (OOP)**. </br> </br>
 
 ## 🔭 Future implementations
 
 - List all games by platform.
+- Add other gaming platforms like Ubisoft Connect, EA App and GOG. </br> </br>
+
+
+## 📝 License 
+
+This project is licensed under the terms of the **MIT** license.
+
+>You can check out the full license [here](https://opensource.org/license/mit/) 
